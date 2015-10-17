@@ -1,6 +1,6 @@
 
 public class Algorithm {
-	String AlgName;
+	 String AlgName = null;
 	
 	public Algorithm(String name) {
 		AlgName = name;
