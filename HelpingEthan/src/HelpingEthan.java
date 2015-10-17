@@ -13,13 +13,10 @@ public class HelpingEthan {
             Class cls[] = new Class[] { String.class };
             Constructor myConstructor = theArray[1].getConstructor(cls);
             
-            Scalar myScalar = (Scalar)myConstructor.newInstance(new Object[] { "myScalar" });
-
-            System.out.println("Scalar object's AlgName is: "+myScalar.getAlgName());
-
+            Object myScalar = myConstructor.newInstance(new Object[] { "myScalar" });
             Method myMethod = theArray[1].getMethod("getAlgName");
             Object myAlgName = myMethod.invoke(myScalar, null);
-            System.out.println("Scalar object's AlgName is: "+myAlgName);
+            System.out.println("Result of getAlgName: "+myAlgName);
         } catch (NoSuchMethodException e) {
         	System.out.println("No such method exists");
         } catch (InstantiationException e) {
