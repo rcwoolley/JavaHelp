@@ -17,7 +17,7 @@ public class HelpingEthan {
 
             System.out.println("Scalar object's AlgName is: "+myScalar.getAlgName());
 
-        	Method myMethod = theArray[1].getMethod("getAlgName");
+            Method myMethod = theArray[1].getMethod("getAlgName");
             Object myAlgName = myMethod.invoke(myScalar, null);
             System.out.println("Scalar object's AlgName is: "+myAlgName);
         } catch (NoSuchMethodException e) {
